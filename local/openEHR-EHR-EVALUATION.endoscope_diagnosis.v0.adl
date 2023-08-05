@@ -1,0 +1,59 @@
+archetype (adl_version=1.4; uid=48d8e931-4f1d-4ff1-a0a9-3fe524ba42ea)
+	openEHR-EHR-EVALUATION.endoscope_diagnosis.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2023-08-05">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"9d084c38c559042e5ace59fb92a71b13">
+		["build_uid"] = <"5fd491d8-6786-3083-8ae0-2ee517daece4">
+	>
+
+definition
+	EVALUATION[at0000] matches {    -- endoscope diagnosis
+		data matches {
+			ITEM_TREE matches {
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0001] occurrences matches {0..1} matches {    -- 内镜诊断
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"endoscope diagnosis">
+					description = <"endoscope diagnosis">
+				>
+				["at0001"] = <
+					text = <"内镜诊断">
+					description = <"">
+				>
+			>
+		>
+	>
