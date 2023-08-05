@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"1f688dd8fd0d900329b0d70a92a3633b">
+		["MD5-CAM-1.0.1"] = <"00682afb2aba62b101a1aa6ed5433620">
 		["build_uid"] = <"2573c587-e812-3f8e-882b-b097b7077ad7">
 	>
 
@@ -53,12 +53,19 @@ definition
 											3|[local::at0015]
 										}
 									}
-									ELEMENT[at0006] occurrences matches {0..1} matches {    -- DV_QUANTITY
+									ELEMENT[at0006] occurrences matches {0..1} matches {    -- 取样次数
 										value matches {
-											DV_QUANTITY matches {*}
+											C_DV_QUANTITY <
+												property = <[openehr::381]>
+												list = <
+													["1"] = <
+														units = <"eq">
+													>
+												>
+											>
 										}
 									}
-									ELEMENT[at0009] occurrences matches {0..1} matches {    -- DV_PROPORTION
+									ELEMENT[at0009] occurrences matches {0..1} matches {    -- 占比
 										value matches {
 											DV_PROPORTION matches {*}
 										}
@@ -107,7 +114,7 @@ ontology
 					description = <"">
 				>
 				["at0006"] = <
-					text = <"DV_QUANTITY">
+					text = <"取样次数">
 					description = <"">
 				>
 				["at0008"] = <
@@ -115,7 +122,7 @@ ontology
 					description = <"">
 				>
 				["at0009"] = <
-					text = <"DV_PROPORTION">
+					text = <"占比">
 					description = <"">
 				>
 				["at0010"] = <
