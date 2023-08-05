@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"851305199190f32d047e8601b0add6b5">
+		["MD5-CAM-1.0.1"] = <"30c28f5b78e65770984ca64389352bb3">
 		["build_uid"] = <"4164bab6-908d-3818-877a-cc00ebdac7c6">
 	>
 
@@ -56,7 +56,7 @@ definition
 											DV_DATE matches {*}
 										}
 									}
-									ELEMENT[at0008] occurrences matches {0..1} matches {    -- DV_TIME
+									ELEMENT[at0008] occurrences matches {0..1} matches {    -- 检查时间
 										value matches {
 											DV_TIME matches {*}
 										}
@@ -76,6 +76,25 @@ definition
 										value matches {
 											DV_BOOLEAN matches {*}
 										}
+									}
+									ELEMENT[at0013] occurrences matches {0..1} matches {    -- DV_IDENTIFIER
+										value matches {
+											DV_IDENTIFIER matches {*}
+										}
+									}
+									ELEMENT[at0014] occurrences matches {0..1} matches {    -- DV_DURATION
+										value matches {
+											DV_DURATION matches {*}
+										}
+									}
+									CLUSTER[at0016] occurrences matches {0..1} matches {    -- CLUSTER
+										items cardinality matches {1..*; unordered} matches {
+											use_node ELEMENT occurrences matches {0..1} /data[at0001]/events[at0002]/data[at0003]/items[at0008]
+										}
+									}
+									allow_archetype CLUSTER[at0015] occurrences matches {0..*} matches {    -- CLUSTER_SLOT
+										include
+											archetype_id/value matches {/.*/}
 									}
 								}
 							}
@@ -126,7 +145,7 @@ ontology
 					description = <"">
 				>
 				["at0008"] = <
-					text = <"DV_TIME">
+					text = <"检查时间">
 					description = <"">
 				>
 				["at0009"] = <
@@ -143,6 +162,26 @@ ontology
 				>
 				["at0012"] = <
 					text = <"DV_BOOLEAN">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"DV_IDENTIFIER">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"DV_DURATION">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"CLUSTER_SLOT">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"CLUSTER">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"ELEMENT">
 					description = <"">
 				>
 			>
