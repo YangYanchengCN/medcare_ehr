@@ -1,0 +1,147 @@
+archetype (adl_version=1.4; uid=33b4567a-915b-46bb-b388-6b46e07f8f09)
+	openEHR-EHR-OBSERVATION.endoscope_view.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2023-08-05">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"1f688dd8fd0d900329b0d70a92a3633b">
+		["build_uid"] = <"2573c587-e812-3f8e-882b-b097b7077ad7">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- endoscope view
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0004] occurrences matches {0..1} matches {    -- 普通文本
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0008] occurrences matches {0..1} matches {    -- DV_CODED_TEXT
+										value matches {
+											DV_CODED_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0012] occurrences matches {0..1} matches {    -- DV_ORDINAL
+										value matches {
+											1|[local::at0013],
+											2|[local::at0014],
+											3|[local::at0015]
+										}
+									}
+									ELEMENT[at0006] occurrences matches {0..1} matches {    -- DV_QUANTITY
+										value matches {
+											DV_QUANTITY matches {*}
+										}
+									}
+									ELEMENT[at0009] occurrences matches {0..1} matches {    -- DV_PROPORTION
+										value matches {
+											DV_PROPORTION matches {*}
+										}
+									}
+									ELEMENT[at0010] occurrences matches {0..1} matches {    -- DV_COUNT
+										value matches {
+											DV_COUNT matches {*}
+										}
+									}
+									ELEMENT[at0011] occurrences matches {0..1} matches {    -- DV_DATE_TIME
+										value matches {
+											DV_DATE_TIME matches {*}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"endoscope view">
+					description = <"endoscope view">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"普通文本">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"DV_QUANTITY">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"DV_CODED_TEXT">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"DV_PROPORTION">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"DV_COUNT">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"DV_DATE_TIME">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"DV_ORDINAL">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"男">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"女">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"未知">
+					description = <"">
+				>
+			>
+		>
+	>
