@@ -1,0 +1,102 @@
+archetype (adl_version=1.4; uid=112e6759-4d08-408e-81c9-1c94a533601b)
+	openEHR-EHR-COMPOSITION.endoscope_report.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2023-08-05">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"f6e47c17eccb0a9ebb1a098813f05da1">
+		["build_uid"] = <"5a44208d-380b-3962-b5a8-c10d9718f239">
+	>
+
+definition
+	COMPOSITION[at0000] matches {    -- endoscope_report
+		category matches {
+			DV_CODED_TEXT matches {
+				defining_code matches {
+					[openehr::433]
+				}
+			}
+		}
+		context matches {
+			EVENT_CONTEXT matches {*}
+		}
+		content cardinality matches {1..*; unordered} matches {
+			OBSERVATION[at0001] occurrences matches {0..1} matches {    -- eeee
+				data matches {
+					HISTORY matches {
+						events cardinality matches {1..*; unordered} matches {
+							INTERVAL_EVENT[at0002] occurrences matches {0..1} matches {    -- Interval event
+								data matches {
+									ITEM_TREE matches {
+										items cardinality matches {0..*; unordered} matches {
+											ELEMENT[at0003] occurrences matches {0..1} matches {*}    -- ELEMENT
+											allow_archetype ELEMENT[at0004] occurrences matches {0..*} matches {    -- uuu
+												include
+													archetype_id/value matches {/.*/}
+											}
+											ELEMENT[at0005] occurrences matches {0..1} matches {    -- DV_IDENTIFIER
+												value matches {
+													DV_IDENTIFIER matches {*}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"endoscope_report">
+					description = <"endoscope_report">
+				>
+				["at0001"] = <
+					text = <"eeee">
+					description = <"">
+				>
+				["at0002"] = <
+					text = <"Interval event">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"ELEMENT">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"uuu">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"DV_IDENTIFIER">
+					description = <"">
+				>
+			>
+		>
+	>
