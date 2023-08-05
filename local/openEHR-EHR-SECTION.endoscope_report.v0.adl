@@ -1,0 +1,78 @@
+archetype (adl_version=1.4; uid=54bb9785-cb94-4c66-87b7-c34297a1ada5)
+	openEHR-EHR-SECTION.endoscope_report.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2023-08-05">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"7a62ed4f7212acfdcd952166632b396c">
+		["build_uid"] = <"5253777b-e337-394b-bad5-0752761988a3">
+	>
+
+definition
+	SECTION[at0000] matches {    -- endoscope report
+		items cardinality matches {1..*; unordered} matches {
+			SECTION[at0001] occurrences matches {0..1} matches {    -- 报告内容
+				items cardinality matches {1..*; unordered} matches {
+					OBSERVATION[at0002] occurrences matches {0..1} matches {    -- 所见
+						data matches {
+							HISTORY matches {
+								events cardinality matches {1..*; unordered} matches {
+									EVENT[at0003] occurrences matches {0..1} matches {    -- 所见event
+										data matches {
+											ITEM_TREE matches {*}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				name matches {
+					DV_CODED_TEXT matches {*}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"endoscope report">
+					description = <"endoscope report">
+				>
+				["at0001"] = <
+					text = <"报告内容">
+					description = <"">
+				>
+				["at0002"] = <
+					text = <"所见">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"所见event">
+					description = <"">
+				>
+			>
+		>
+	>
