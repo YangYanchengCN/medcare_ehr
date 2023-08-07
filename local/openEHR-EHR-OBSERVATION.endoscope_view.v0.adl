@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"d3888f8a6b5a4c9e07985a5bceebfa3d">
+		["MD5-CAM-1.0.1"] = <"b92b810c4df53311f53eabcce4661a5a">
 		["build_uid"] = <"2573c587-e812-3f8e-882b-b097b7077ad7">
 	>
 
@@ -65,6 +65,66 @@ definition
 													>
 												>
 											>
+										}
+									}
+									ELEMENT[at0016] occurrences matches {0..1} matches {    -- DV_COUNT
+										value matches {
+											DV_COUNT matches {*}
+										}
+									}
+									ELEMENT[at0017] occurrences matches {0..1} matches {    -- DV_ORDINAL
+										value matches {
+											DV_ORDINAL matches {*}
+										}
+									}
+									CLUSTER[at0018] occurrences matches {0..1} matches {    -- CLUSTER
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0019] occurrences matches {0..1} matches {    -- DV_PROPORTION
+												value matches {
+													DV_PROPORTION matches {*}
+												}
+											}
+											ELEMENT[at0020] occurrences matches {0..1} matches {    -- DV_QUANTITY
+												value matches {
+													DV_QUANTITY matches {*}
+												}
+											}
+											ELEMENT[at0021] occurrences matches {0..1} matches {    -- DV_QUANTITY
+												value matches {
+													DV_QUANTITY matches {*}
+												}
+											}
+											ELEMENT[at0022] occurrences matches {0..1} matches {    -- DV_QUANTITY
+												value matches {
+													DV_QUANTITY matches {*}
+												}
+											}
+											CLUSTER[at0023] occurrences matches {0..1} matches {    -- CLUSTER
+												items cardinality matches {1..*; unordered} matches {
+													ELEMENT[at0024] occurrences matches {0..1} matches {    -- DV_TIME
+														value matches {
+															DV_TIME matches {*}
+														}
+													}
+													ELEMENT[at0025] occurrences matches {0..1} matches {    -- DV_COUNT
+														value matches {
+															DV_COUNT matches {*}
+														}
+													}
+													ELEMENT[at0026] occurrences matches {0..1} matches {    -- DV_COUNT
+														value matches {
+															DV_COUNT matches {*}
+														}
+													}
+													ELEMENT[at0027] occurrences matches {0..1} matches {    -- DV_COUNT
+														value matches {
+															DV_COUNT matches {
+																magnitude matches {|0..1|}
+															}
+														}
+													}
+												}
+											}
 										}
 									}
 									ELEMENT[at0009] occurrences matches {0..1} matches {    -- 占比
@@ -152,6 +212,54 @@ ontology
 				>
 				["at0015"] = <
 					text = <"未知">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"DV_COUNT">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"DV_ORDINAL">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"CLUSTER">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"DV_PROPORTION">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"DV_QUANTITY">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"DV_QUANTITY">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"DV_QUANTITY">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"CLUSTER">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"DV_TIME">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"DV_COUNT">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"DV_COUNT">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"DV_COUNT">
 					description = <"">
 				>
 			>
