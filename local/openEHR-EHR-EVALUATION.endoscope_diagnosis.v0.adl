@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"9d084c38c559042e5ace59fb92a71b13">
+		["MD5-CAM-1.0.1"] = <"f8aacc2bc91dd1c75212c98ebd0f3021">
 		["build_uid"] = <"5fd491d8-6786-3083-8ae0-2ee517daece4">
 	>
 
@@ -32,13 +32,91 @@ definition
 		data matches {
 			ITEM_TREE matches {
 				items cardinality matches {0..*; unordered} matches {
-					ELEMENT[at0001] occurrences matches {0..1} matches {    -- 内镜诊断
+					ELEMENT[at0001] occurrences matches {0..100} matches {    -- 内镜诊断
 						value matches {
 							DV_TEXT matches {*}
+						}
+						name matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0002] occurrences matches {0..1} matches {    -- DV_CODED_TEXT
+						value matches {
+							DV_CODED_TEXT matches {*}
+							DV_BOOLEAN matches {*}
+							DV_COUNT matches {*}
+							DV_DATE matches {*}
+						}
+					}
+					ELEMENT[at0003] occurrences matches {0..1} matches {    -- DV_QUANTITY
+						value matches {
+							DV_QUANTITY matches {*}
+						}
+					}
+					ELEMENT[at0004] occurrences matches {0..1} matches {    -- DV_PROPORTION
+						value matches {
+							DV_PROPORTION matches {*}
+						}
+					}
+					ELEMENT[at0005] occurrences matches {0..1} matches {    -- DV_COUNT
+						value matches {
+							DV_COUNT matches {*}
+						}
+					}
+					ELEMENT[at0006] occurrences matches {0..1} matches {    -- DV_DATE_TIME
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0007] occurrences matches {0..1} matches {    -- DV_TIME
+						value matches {
+							DV_TIME matches {*}
+						}
+					}
+					ELEMENT[at0008] occurrences matches {0..1} matches {    -- DV_DATE
+						value matches {
+							DV_DATE matches {*}
+						}
+					}
+					ELEMENT[at0009] occurrences matches {0..1} matches {    -- DV_ORDINAL
+						value matches {
+							DV_ORDINAL matches {*}
+						}
+					}
+					ELEMENT[at0010] occurrences matches {0..1} matches {    -- DV_BOOLEAN
+						value matches {
+							DV_BOOLEAN matches {*}
+						}
+					}
+					ELEMENT[at0011] occurrences matches {0..1} matches {*}    -- ANY
+					CLUSTER[at0012] occurrences matches {0..1} matches {    -- CLUSTER
+						items cardinality matches {1..*; unordered} matches {
+							allow_archetype CLUSTER[at0013] occurrences matches {0..*} matches {    -- CLUSTER_SLOT
+								include
+									archetype_id/value matches {/.*/}
+							}
+							ELEMENT[at0016] occurrences matches {0..1} matches {    -- DV_CODED_TEXT
+								value matches {
+									DV_CODED_TEXT matches {*}
+								}
+							}
+						}
+					}
+					ELEMENT[at0014] occurrences matches {0..1} matches {    -- DV_DURATION
+						value matches {
+							DV_DURATION matches {*}
+						}
+					}
+					ELEMENT[at0015] occurrences matches {0..1} matches {    -- DV_IDENTIFIER
+						value matches {
+							DV_IDENTIFIER matches {*}
 						}
 					}
 				}
 			}
+		}
+		protocol matches {
+			ITEM_TREE matches {*}
 		}
 	}
 
@@ -52,6 +130,66 @@ ontology
 				>
 				["at0001"] = <
 					text = <"内镜诊断">
+					description = <"">
+				>
+				["at0002"] = <
+					text = <"DV_CODED_TEXT">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"DV_QUANTITY">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"DV_PROPORTION">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"DV_COUNT">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"DV_DATE_TIME">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"DV_TIME">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"DV_DATE">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"DV_ORDINAL">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"DV_BOOLEAN">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"ANY">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"CLUSTER">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"CLUSTER_SLOT">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"DV_DURATION">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"DV_IDENTIFIER">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"DV_CODED_TEXT">
 					description = <"">
 				>
 			>
