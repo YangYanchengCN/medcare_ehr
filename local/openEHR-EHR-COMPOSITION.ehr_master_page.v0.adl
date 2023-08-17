@@ -1,0 +1,107 @@
+archetype (adl_version=1.4; uid=76b2f9cd-9110-4b7a-9f8c-8362b49cba23)
+	openEHR-EHR-COMPOSITION.ehr_master_page.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::zh-cn]>
+
+description
+	original_author = <
+		["name"] = <"YanCheng Yang">
+		["organisation"] = <"Medcare">
+		["email"] = <"yangyancheng@msn.com">
+		["date"] = <"2023-08-17">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["zh-cn"] = <
+			language = <[ISO_639-1::zh-cn]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"9ea56fe587a0a2709b2bcb0ae1825228">
+		["build_uid"] = <"fd7b32ba-0402-32eb-b9ef-b4077a520ed5">
+	>
+
+definition
+	COMPOSITION[at0000] matches {    -- EHR Master Page
+		category matches {
+			DV_CODED_TEXT matches {
+				defining_code matches {
+					[openehr::433]
+				}
+			}
+		}
+		context matches {
+			EVENT_CONTEXT matches {
+				end_time matches {
+					DV_DATE_TIME[at0001] matches {*}    -- DV_DATE_TIME
+				}
+				participations cardinality matches {1..*; unordered} matches {
+					PARTICIPATION[at0002] occurrences matches {0..1} matches {    -- PARTICIPATION
+						mode matches {
+							DV_CODED_TEXT[at0003] matches {*}    -- DV_CODED_TEXT
+						}
+						time matches {
+							DV_INTERVAL[at0004] matches {*}    -- DV_INTERVAL
+						}
+					}
+				}
+			}
+		}
+		content cardinality matches {1..*; unordered} matches {
+			SECTION[at0005] occurrences matches {0..1} matches {*}    -- EndoScope
+			allow_archetype ADMIN_ENTRY[at0006] occurrences matches {0..*} matches {    -- ADMIN_ENTRY
+				include
+					archetype_id/value matches {/.*/}
+			}
+			INSTRUCTION[at0007] occurrences matches {0..1} matches {*}    -- INSTRUCTION
+		}
+	}
+
+ontology
+	term_definitions = <
+		["zh-cn"] = <
+			items = <
+				["at0000"] = <
+					text = <"EHR Master Page">
+					description = <"EHR Master Page">
+				>
+				["at0001"] = <
+					text = <"DV_DATE_TIME">
+					description = <"">
+				>
+				["at0002"] = <
+					text = <"PARTICIPATION">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"DV_CODED_TEXT">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"DV_INTERVAL">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"EndoScope">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"ADMIN_ENTRY">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"INSTRUCTION">
+					description = <"">
+				>
+			>
+		>
+	>
