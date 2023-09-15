@@ -26,12 +26,20 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"aabc833d4b79dde0983c93dd52c31948">
+		["MD5-CAM-1.0.1"] = <"ca5a5335d7ca9d1634acfaa7b46860a3">
 		["build_uid"] = <"67454cf1-d905-3811-a7d0-3ab92a327775">
 	>
 
 definition
-	SECTION[at0000] matches {*}    -- TiJianBaoGaoXiangQingYe
+	SECTION[at0000] matches {    -- TiJianBaoGaoXiangQingYe
+		items cardinality matches {1..*; unordered} matches {
+			OBSERVATION[at0002] occurrences matches {0..1} matches {    -- suojian
+				data matches {
+					HISTORY[at0001] matches {*}    -- History
+				}
+			}
+		}
+	}
 
 ontology
 	term_definitions = <
@@ -40,6 +48,14 @@ ontology
 				["at0000"] = <
 					text = <"TiJianBaoGaoXiangQingYe">
 					description = <"TiJianBaoGaoXiangQingYe">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"suojian">
+					description = <"">
 				>
 			>
 		>
