@@ -1,0 +1,46 @@
+archetype (adl_version=1.4; uid=618bb4af-2421-4dc9-bced-2a43549d7f0b)
+	openEHR-EHR-SECTION.tijianbaogaoxiangqingye.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::zh-cn]>
+
+description
+	original_author = <
+		["name"] = <"YanCheng Yang">
+		["organisation"] = <"Medcare">
+		["email"] = <"yangyancheng@msn.com">
+		["date"] = <"2023-09-15">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["zh-cn"] = <
+			language = <[ISO_639-1::zh-cn]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"aabc833d4b79dde0983c93dd52c31948">
+		["build_uid"] = <"67454cf1-d905-3811-a7d0-3ab92a327775">
+	>
+
+definition
+	SECTION[at0000] matches {*}    -- TiJianBaoGaoXiangQingYe
+
+ontology
+	term_definitions = <
+		["zh-cn"] = <
+			items = <
+				["at0000"] = <
+					text = <"TiJianBaoGaoXiangQingYe">
+					description = <"TiJianBaoGaoXiangQingYe">
+				>
+			>
+		>
+	>
