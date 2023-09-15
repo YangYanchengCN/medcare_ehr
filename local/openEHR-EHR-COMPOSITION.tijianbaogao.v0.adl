@@ -1,0 +1,57 @@
+archetype (adl_version=1.4; uid=104bfa13-f915-4a0b-a5fa-fbc767ff651e)
+	openEHR-EHR-COMPOSITION.tijianbaogao.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::zh-cn]>
+
+description
+	original_author = <
+		["name"] = <"YanCheng Yang">
+		["organisation"] = <"Medcare">
+		["email"] = <"yangyancheng@msn.com">
+		["date"] = <"2023-09-15">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["zh-cn"] = <
+			language = <[ISO_639-1::zh-cn]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"0e66aebbb5fd298c8f2e62c6e1041f4d">
+		["build_uid"] = <"a721ce53-84b1-38bc-ad7f-4e6c2f6ffed1">
+	>
+
+definition
+	COMPOSITION[at0000] matches {    -- TiJIanBaoGao
+		category matches {
+			DV_CODED_TEXT matches {
+				defining_code matches {
+					[openehr::433]
+				}
+			}
+		}
+		context matches {
+			EVENT_CONTEXT matches {*}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["zh-cn"] = <
+			items = <
+				["at0000"] = <
+					text = <"TiJIanBaoGao">
+					description = <"TiJIanBaoGao">
+				>
+			>
+		>
+	>
