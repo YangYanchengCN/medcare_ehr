@@ -9,10 +9,10 @@ language
 
 description
 	original_author = <
+		["date"] = <"2023-09-15">
 		["name"] = <"YanCheng Yang">
 		["organisation"] = <"Medcare">
 		["email"] = <"yangyancheng@msn.com">
-		["date"] = <"2023-09-15">
 	>
 	lifecycle_state = <"unmanaged">
 	details = <
@@ -26,12 +26,12 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"ca5a5335d7ca9d1634acfaa7b46860a3">
+		["MD5-CAM-1.0.1"] = <"ccbb044a81b1bfbef8003ca151457c75">
 		["build_uid"] = <"67454cf1-d905-3811-a7d0-3ab92a327775">
 	>
 
 definition
-	SECTION[at0000] matches {    -- TiJianBaoGaoXiangQingYe
+	SECTION[at0000] matches {    -- TiJianBaoGaoXiangQingYe1
 		items cardinality matches {1..*; unordered} matches {
 			OBSERVATION[at0002] occurrences matches {0..1} matches {    -- suojian
 				data matches {
@@ -46,7 +46,7 @@ ontology
 		["zh-cn"] = <
 			items = <
 				["at0000"] = <
-					text = <"TiJianBaoGaoXiangQingYe">
+					text = <"TiJianBaoGaoXiangQingYe1">
 					description = <"TiJianBaoGaoXiangQingYe">
 				>
 				["at0001"] = <
