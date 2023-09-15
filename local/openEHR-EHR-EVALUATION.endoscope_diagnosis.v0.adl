@@ -23,14 +23,14 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"f8aacc2bc91dd1c75212c98ebd0f3021">
+		["MD5-CAM-1.0.1"] = <"8efa12ff7c7903eb6795fca82e70a0ad">
 		["build_uid"] = <"5fd491d8-6786-3083-8ae0-2ee517daece4">
 	>
 
 definition
 	EVALUATION[at0000] matches {    -- endoscope diagnosis
 		data matches {
-			ITEM_TREE matches {
+			ITEM_TREE[at0017] matches {    -- ITEM_TREE
 				items cardinality matches {0..*; unordered} matches {
 					ELEMENT[at0001] occurrences matches {0..100} matches {    -- 内镜诊断
 						value matches {
@@ -116,7 +116,7 @@ definition
 			}
 		}
 		protocol matches {
-			ITEM_TREE matches {*}
+			ITEM_TREE[at0018] matches {*}    -- ITEM_TREE
 		}
 	}
 
@@ -190,6 +190,14 @@ ontology
 				>
 				["at0016"] = <
 					text = <"DV_CODED_TEXT">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"ITEM_TREE">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"ITEM_TREE">
 					description = <"">
 				>
 			>
