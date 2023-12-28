@@ -19,10 +19,10 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.0",
+      "sem_ver" : "1.0.0",
       "build_uid" : "f2615236-7361-43f0-899f-7b5eff141ded",
-      "MD5-CAM-1.0.1" : "9057f3cbab7b87fcfc613be3af9c2186",
-      "PARENT:MD5-CAM-1.0.1" : "00682afb2aba62b101a1aa6ed5433620"
+      "MD5-CAM-1.0.1" : "e8dd6e4455a7ab5b8a693e42fb2ec6c2",
+      "PARENT:MD5-CAM-1.0.1" : "b92b810c4df53311f53eabcce4661a5a"
     },
     "details" : {
       "en" : {
@@ -49,7 +49,254 @@
     "@type" : "C_COMPLEX_OBJECT",
     "rmTypeName" : "OBSERVATION",
     "nodeId" : "at0000.1",
-    "attributes" : [ ],
+    "attributes" : [ {
+      "@type" : "C_ATTRIBUTE",
+      "rmAttributeName" : "data",
+      "children" : [ {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "HISTORY",
+        "nodeId" : "at0001",
+        "attributes" : [ {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "events",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "EVENT",
+            "nodeId" : "at0002",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "data",
+              "children" : [ {
+                "@type" : "C_COMPLEX_OBJECT",
+                "rmTypeName" : "ITEM_TREE",
+                "nodeId" : "at0003",
+                "attributes" : [ {
+                  "@type" : "C_ATTRIBUTE",
+                  "rmAttributeName" : "items",
+                  "children" : [ {
+                    "@type" : "C_COMPLEX_OBJECT",
+                    "rmTypeName" : "ELEMENT",
+                    "nodeId" : "at0016.1",
+                    "attributes" : [ {
+                      "@type" : "C_ATTRIBUTE",
+                      "rmAttributeName" : "value",
+                      "children" : [ {
+                        "@type" : "C_COMPLEX_OBJECT",
+                        "rmTypeName" : "DV_COUNT",
+                        "defaultValue" : {
+                          "magnitude" : 0.5,
+                          "@type" : "DV_COUNT"
+                        },
+                        "attributes" : [ {
+                          "@type" : "C_ATTRIBUTE",
+                          "rmAttributeName" : "magnitude",
+                          "children" : [ {
+                            "@type" : "C_INTEGER",
+                            "rmTypeName" : "INTEGER",
+                            "constraint" : [ {
+                              "lower" : 0,
+                              "upper" : 1,
+                              "lowerIncluded" : true,
+                              "upperIncluded" : true,
+                              "lowerUnbounded" : false,
+                              "upperUnbounded" : false
+                            } ]
+                          } ]
+                        } ],
+                        "attributeTuples" : [ ]
+                      } ]
+                    } ],
+                    "attributeTuples" : [ ]
+                  }, {
+                    "@type" : "C_COMPLEX_OBJECT",
+                    "rmTypeName" : "ELEMENT",
+                    "nodeId" : "at0017.1",
+                    "attributes" : [ {
+                      "@type" : "C_ATTRIBUTE",
+                      "rmAttributeName" : "value",
+                      "children" : [ {
+                        "@type" : "C_COMPLEX_OBJECT",
+                        "rmTypeName" : "DV_ORDINAL",
+                        "attributes" : [ ],
+                        "attributeTuples" : [ {
+                          "@type" : "C_ATTRIBUTE_TUPLE",
+                          "members" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ ]
+                          }, {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "symbol",
+                            "children" : [ ]
+                          } ],
+                          "tuples" : [ {
+                            "@type" : "C_PRIMITIVE_TUPLE",
+                            "members" : [ {
+                              "@type" : "C_INTEGER",
+                              "rmTypeName" : "INTEGER",
+                              "constraint" : [ {
+                                "lower" : 1,
+                                "upper" : 1,
+                                "lowerIncluded" : true,
+                                "upperIncluded" : true,
+                                "lowerUnbounded" : false,
+                                "upperUnbounded" : false
+                              } ]
+                            }, {
+                              "@type" : "C_TERMINOLOGY_CODE",
+                              "rmTypeName" : "TERMINOLOGY_CODE",
+                              "constraint" : [ "at0.1" ]
+                            } ]
+                          }, {
+                            "@type" : "C_PRIMITIVE_TUPLE",
+                            "members" : [ {
+                              "@type" : "C_INTEGER",
+                              "rmTypeName" : "INTEGER",
+                              "constraint" : [ {
+                                "lower" : 2,
+                                "upper" : 2,
+                                "lowerIncluded" : true,
+                                "upperIncluded" : true,
+                                "lowerUnbounded" : false,
+                                "upperUnbounded" : false
+                              } ]
+                            }, {
+                              "@type" : "C_TERMINOLOGY_CODE",
+                              "rmTypeName" : "TERMINOLOGY_CODE",
+                              "constraint" : [ "at0.2" ]
+                            } ]
+                          }, {
+                            "@type" : "C_PRIMITIVE_TUPLE",
+                            "members" : [ {
+                              "@type" : "C_INTEGER",
+                              "rmTypeName" : "INTEGER",
+                              "constraint" : [ {
+                                "lower" : 3,
+                                "upper" : 3,
+                                "lowerIncluded" : true,
+                                "upperIncluded" : true,
+                                "lowerUnbounded" : false,
+                                "upperUnbounded" : false
+                              } ]
+                            }, {
+                              "@type" : "C_TERMINOLOGY_CODE",
+                              "rmTypeName" : "TERMINOLOGY_CODE",
+                              "constraint" : [ "at0.3" ]
+                            } ]
+                          } ]
+                        } ]
+                      } ]
+                    } ],
+                    "attributeTuples" : [ ]
+                  }, {
+                    "@type" : "C_COMPLEX_OBJECT",
+                    "rmTypeName" : "CLUSTER",
+                    "nodeId" : "at0018",
+                    "attributes" : [ {
+                      "@type" : "C_ATTRIBUTE",
+                      "rmAttributeName" : "items",
+                      "children" : [ {
+                        "@type" : "C_COMPLEX_OBJECT",
+                        "rmTypeName" : "ELEMENT",
+                        "nodeId" : "at0020.1",
+                        "attributes" : [ {
+                          "@type" : "C_ATTRIBUTE",
+                          "rmAttributeName" : "value",
+                          "children" : [ {
+                            "@type" : "C_COMPLEX_OBJECT",
+                            "rmTypeName" : "DV_QUANTITY",
+                            "attributes" : [ ],
+                            "attributeTuples" : [ {
+                              "@type" : "C_ATTRIBUTE_TUPLE",
+                              "members" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "units",
+                                "children" : [ ]
+                              }, {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "magnitude",
+                                "children" : [ ]
+                              }, {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "precision",
+                                "children" : [ ]
+                              } ],
+                              "tuples" : [ {
+                                "@type" : "C_PRIMITIVE_TUPLE",
+                                "members" : [ {
+                                  "@type" : "C_STRING",
+                                  "rmTypeName" : "STRING",
+                                  "constraint" : [ "g/cm3" ]
+                                }, {
+                                  "@type" : "C_REAL",
+                                  "rmTypeName" : "REAL",
+                                  "constraint" : [ {
+                                    "lowerIncluded" : false,
+                                    "upperIncluded" : false,
+                                    "lowerUnbounded" : true,
+                                    "upperUnbounded" : true
+                                  } ]
+                                }, {
+                                  "@type" : "C_INTEGER",
+                                  "rmTypeName" : "INTEGER",
+                                  "constraint" : [ ]
+                                } ]
+                              }, {
+                                "@type" : "C_PRIMITIVE_TUPLE",
+                                "members" : [ {
+                                  "@type" : "C_STRING",
+                                  "rmTypeName" : "STRING",
+                                  "constraint" : [ "cm2" ]
+                                }, {
+                                  "@type" : "C_REAL",
+                                  "rmTypeName" : "REAL",
+                                  "assumedValue" : 1.0,
+                                  "constraint" : [ {
+                                    "lowerIncluded" : false,
+                                    "upperIncluded" : false,
+                                    "lowerUnbounded" : true,
+                                    "upperUnbounded" : true
+                                  } ]
+                                }, {
+                                  "@type" : "C_INTEGER",
+                                  "rmTypeName" : "INTEGER",
+                                  "constraint" : [ {
+                                    "lower" : 1,
+                                    "upper" : 1,
+                                    "lowerIncluded" : true,
+                                    "upperIncluded" : true,
+                                    "lowerUnbounded" : false,
+                                    "upperUnbounded" : false
+                                  } ]
+                                } ]
+                              } ]
+                            } ]
+                          } ]
+                        } ],
+                        "attributeTuples" : [ ]
+                      } ]
+                    } ],
+                    "attributeTuples" : [ ]
+                  } ]
+                } ],
+                "attributeTuples" : [ ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          } ]
+        } ],
+        "attributeTuples" : [ ]
+      } ]
+    }, {
+      "@type" : "C_ATTRIBUTE",
+      "rmAttributeName" : "protocol",
+      "children" : [ {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ITEM_TREE",
+        "attributes" : [ ],
+        "attributeTuples" : [ ]
+      } ]
+    } ],
     "attributeTuples" : [ ]
   },
   "terminology" : {
@@ -62,6 +309,24 @@
           "code" : "at0000.1",
           "text" : "endoscope",
           "description" : "endoscope view"
+        },
+        "at0.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "text" : "1",
+          "description" : "A",
+          "code" : "at0.1"
+        },
+        "at0.2" : {
+          "@type" : "ARCHETYPE_TERM",
+          "text" : "2",
+          "description" : "B",
+          "code" : "at0.2"
+        },
+        "at0.3" : {
+          "@type" : "ARCHETYPE_TERM",
+          "text" : "3",
+          "description" : "C",
+          "code" : "at0.3"
         }
       }
     },
