@@ -19,9 +19,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "1.0.0",
+      "sem_ver" : "2.0.0",
       "build_uid" : "f2615236-7361-43f0-899f-7b5eff141ded",
-      "MD5-CAM-1.0.1" : "e8dd6e4455a7ab5b8a693e42fb2ec6c2",
+      "MD5-CAM-1.0.1" : "07a0f2546404f334987371522ab49ccd",
       "PARENT:MD5-CAM-1.0.1" : "b92b810c4df53311f53eabcce4661a5a"
     },
     "details" : {
@@ -198,6 +198,12 @@
                       "children" : [ {
                         "@type" : "C_COMPLEX_OBJECT",
                         "rmTypeName" : "ELEMENT",
+                        "nodeId" : "at0019.1",
+                        "attributes" : [ ],
+                        "attributeTuples" : [ ]
+                      }, {
+                        "@type" : "C_COMPLEX_OBJECT",
+                        "rmTypeName" : "ELEMENT",
                         "nodeId" : "at0020.1",
                         "attributes" : [ {
                           "@type" : "C_ATTRIBUTE",
@@ -312,19 +318,19 @@
         },
         "at0.1" : {
           "@type" : "ARCHETYPE_TERM",
-          "text" : "1",
+          "text" : "一",
           "description" : "A",
           "code" : "at0.1"
         },
         "at0.2" : {
           "@type" : "ARCHETYPE_TERM",
-          "text" : "2",
+          "text" : "二",
           "description" : "B",
           "code" : "at0.2"
         },
         "at0.3" : {
           "@type" : "ARCHETYPE_TERM",
-          "text" : "3",
+          "text" : "三",
           "description" : "C",
           "code" : "at0.3"
         }
